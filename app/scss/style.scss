@@ -1,0 +1,124 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'libs';
+@import 'media';
+
+.header {
+    margin-bottom: 100px;
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-height: 56px;
+        align-items: center;
+    }
+}
+.swiper-wrapper{
+    overflow: visible;
+}
+.swiper-slide{
+    position: relative;
+    
+    &__title{
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 125px;
+        background: rgba(99, 99, 99, 0.774);
+        top: 115px;
+        left: 0px;
+        z-index: 20;
+        padding: 63px 85px;
+        font-size: 48px;
+        line-height: 62px;
+        color: #fff;
+
+        
+
+    }
+}
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        color: $header;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__phone-number {
+        color: $header;
+        @extend%ubuntu-700;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &__order-call {
+        @extend%ubuntu-400;
+        font-size: 12px;
+        line-height: 18px;
+        text-decoration: underline;
+        text-align: right;
+        color: $header;
+    }
+
+    &__item+.menu__item {
+        padding-left: 80px;
+    }
+}
+
+.product-groups {
+    background-color: $basic;
+    padding-bottom: 100px;
+
+    &__title {
+        color: #fff;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: (1fr 1fr 1fr 1fr);
+        grid-row-gap: 60px;
+        grid-column-gap: 30px;
+        justify-content: space-between;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 20px;
+        svg{
+            width: 70px;
+            height: 70px;
+        }
+    }
+   
+
+    &__text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+
+    }
+}
