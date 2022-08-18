@@ -1,18 +1,24 @@
-body{
+body {
     @extend%ubuntu-500
 }
-.container{
+
+.container {
     max-width: 1290px;
     margin: 0 auto;
 }
 
-.swiper {
+.swiper-header {
     width: 1290px;
     height: 600px;
-  }
+}
+
+.swiper-partners {
+    width: 1290px;
+    height: 360px;
+}
 
 
-  .swiper-pagination-bullet {
+.swiper-pagination .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     background-color: transparent;
@@ -24,7 +30,8 @@ body{
         opacity: 1;
     }
 }
-.title{
+
+.title {
     font-size: 48px;
     line-height: 62px;
     text-transform: uppercase;
