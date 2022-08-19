@@ -46,7 +46,7 @@ function scripts() {
 }
 
 function images() {
-    return src('app/images/*')
+    return src('app/images/**/*')
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({ quality: 75, progressive: true }),
@@ -65,14 +65,15 @@ function build() {
     return src([
             'app/**/*.html',
             'app/css/style.min.css',
-            'app/js/main.js'
+            'app/fonts/*',
+            'app/js/main.min.js'
         ], { base: 'app' })
         .pipe(dest('dist'));
         
 
 }
 function deployProject(){
-    return src(['dist/**/*'])
+    return src(['./dist/**/*'])
     .pipe(ghPages());
 }
 

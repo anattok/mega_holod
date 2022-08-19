@@ -1,3 +1,4 @@
+// УПРАВЛЕНИЕ СВАЙПЕР-СЛАЙДЕРАМИ
 const headerSlider = document.querySelector('.swiper-header');
 const partnersSlider = document.querySelector('.swiper-partners');
 
@@ -23,6 +24,23 @@ const mySwiperTwo = new Swiper(partnersSlider, {
 
   });
 
+  // УПАРАВЛЕНИЕ САЙДБАРОМ В КАТАЛОГЕ
+  const navHeader = document.querySelectorAll('.nav-item__header');
+
+  navHeader.forEach((item => {
+
+    item.addEventListener('click', function (event){
+
+      const list = event.target.parentElement.lastElementChild;
+      const header = event.target;
+
+      list.classList.toggle('active');
+      header.classList.toggle('active');
+      
+
+    });
+
+  }));
 
 
 

@@ -40,3 +40,43 @@ body {
     padding-top: 100px;
     padding-bottom: 60px;
 }
+
+.breadcrumps {
+    padding: 40px 0;
+
+    &__list {
+        display: flex;
+        
+    }
+
+    &__item {
+        position: relative;
+        &+.breadcrumps__item {
+            ::before {
+                position: absolute;
+                content: '';
+                background-image: url('../images/icons/arrow-breadcrumps.svg');
+                width: 10px;
+                height: 15px;
+                top: 4px;
+                left: -28px;
+            }
+            :last-child {
+                color: $basic;
+            }
+        }
+        
+    }
+
+    &__link {
+        margin-right: 50px;
+        color: #8E8E8E;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        
+        
+    }
+
+}
