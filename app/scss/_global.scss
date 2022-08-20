@@ -1,6 +1,14 @@
 body {
-    @extend%ubuntu-500
+    @extend%ubuntu-500;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+main {
+    flex: 1;
+}
+
+
 
 .container {
     max-width: 1290px;
@@ -46,27 +54,20 @@ body {
 
     &__list {
         display: flex;
-        
+
+
+
     }
 
     &__item {
         position: relative;
-        &+.breadcrumps__item {
-            ::before {
-                position: absolute;
-                content: '';
-                background-image: url('../images/icons/arrow-breadcrumps.svg');
-                width: 10px;
-                height: 15px;
-                top: 4px;
-                left: -28px;
-            }
-            :last-child {
-                color: $basic;
-            }
+
+        &:last-child a {
+            color: $basic;
         }
-        
+
     }
+
 
     &__link {
         margin-right: 50px;
@@ -75,8 +76,22 @@ body {
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
-        
-        
+
+
+
+    }
+
+}
+
+.breadcrumps__item+.breadcrumps__item {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url('../images/icons/arrow-breadcrumps.svg');
+        width: 10px;
+        height: 15px;
+        top: 4px;
+        left: -28px;
     }
 
 }

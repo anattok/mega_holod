@@ -7,7 +7,13 @@
 
 .header {
 
-
+&__inner{
+    border-bottom: 1px solid #E5E5E5;
+    &.shadow {
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+    
+    }
+}
 
     &__menu {
         display: flex;
@@ -23,10 +29,7 @@
     }
 }
 
-.header .shadow {
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
 
-}
 
 .swiper-wrapper {
     overflow: visible;
@@ -544,6 +547,7 @@
 
     &__columns {
         display: flex;
+
         justify-content: space-between;
     }
 }
@@ -551,7 +555,6 @@
 .aside {
     width: 300px;
     padding: 10px 20px;
-    height: auto;
     background-color: #F8F8F8;
 }
 
@@ -570,7 +573,7 @@
             width: 15px;
             height: 10px;
             top: 6px;
-            right: 6px;
+            right: 0px;
         }
 
         &.active {
@@ -581,7 +584,7 @@
                 width: 15px;
                 height: 10px;
                 top: 6px;
-                right: 6px;
+                right: 0px;
             }
 
         }
@@ -626,16 +629,24 @@
         grid-column-gap: 30px;
 
     }
-
-    &__image {
-        margin-bottom: 20px;
+    &__card{
+        border: 1px solid #E5E5E5;
+        box-shadow: -13px 13px 14px -10px rgba(34, 60, 80, 0.2);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        height: 400px;
     }
+    
 
     &__title {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 27px;
-        margin-bottom: 20px;
+        height: 50px;
+        overflow: hidden;
     }
 
     &__bottom {
@@ -647,14 +658,16 @@
     &__price {
         text-decoration: underline;
         font-weight: 700;
-        font-size: 18px;
-        line-height: 27px ;
+        font-size: 16px;
+        line-height: 27px;
         color: $basic;
     }
+
     &__price {
         padding-right: 30px;
         position: relative;
-        &::before{
+
+        &::before {
             position: absolute;
             content: '';
             background-image: url('../images/icons/arrow-price.svg');
@@ -663,6 +676,56 @@
             top: 8px;
             right: 10px;
         }
-        
+
+    }
+}
+
+.product-item {
+    padding-bottom: 100px;
+
+    &__columns {
+        display: flex;
+    }
+
+    &__description {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 47px;
+        color: $basic;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+        display: flex;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+
+        & span {
+            width: 300px;
+        }
+
+        & span:last-child {
+            padding-left: 30px;
+            opacity: 0.6;
+        }
+    }
+    &__btn{
+        width: 300px;
+        text-align: center;
+        padding: 12px 0;
+        background-color: $basic;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 36px;
     }
 }
