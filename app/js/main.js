@@ -1,3 +1,26 @@
+//УПАРВЛЕНИЕ БУРГЕР МЕНЮ 
+
+const burgerBtn = document.querySelector('.menu__btn');
+
+burgerBtn.addEventListener('click', ()=>{
+
+  const menuList = document.querySelector('.menu__list');
+  
+  if(menuList.classList.contains('active')){
+    menuList.style.cssText ='transform: translateX(-200%); transition: all .5s';
+    menuList.classList.remove('active');
+
+  }else{
+    menuList.classList.add('active');
+    menuList.style.cssText ='transform: translateX(0); transition: all .5s';
+  }
+  
+});
+
+
+
+
+
 // УПРАВЛЕНИЕ СВАЙПЕР-СЛАЙДЕРАМИ
 const headerSlider = document.querySelector('.swiper-header');
 const partnersSlider = document.querySelector('.swiper-partners');
@@ -21,6 +44,27 @@ const mySwiperTwo = new Swiper(partnersSlider, {
     prevEl: '.swiper-partners-button-prev',
   },
 
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
 
 });
 
@@ -41,7 +85,7 @@ let holod = {
   "2": {
     "name": "Витрина низкотемпературная ОКХ-100",
     "link": "product.html",
-    "img": "images/products/kholodilnoe-oborudovanie/vitrina_srednetemperaturnaya.jpg",
+    "img": "images/products/kholodilnoe-oborudovanie/vitrina_nizkotemperaturnaya.jpg",
     "brand": "Бренд 2",
     "size": "20х30х500мм",
     "volt": "220v",
@@ -51,7 +95,7 @@ let holod = {
   "3": {
     "name": "Ларь морозильный МЛП-400",
     "link": "product.html",
-    "img": "images/products/oborudovanie-dlya-pekarni/mashina_dlya_rezki_khlebobulochnykh_izdeli.jpg",
+    "img": "images/products/kholodilnoe-oborudovanie/vitrina_srednetemperaturnaya.jpg",
     "brand": "Бренд 3",
     "size": "20х30х500мм",
     "volt": "220v",
@@ -130,13 +174,22 @@ let torg = {
     "volt": "220v",
     "temp": "+1 - +10C"
   },
+  "5": {
+    "name": "капуста",
+    "link": "product.html",
+    "img": "https://edaplus.info/food_pictures/cabbage.jpg",
+    "brand": "Бренд 3",
+    "size": "20х30х500мм",
+    "volt": "220v",
+    "temp": "+1 - +10C"
+  },
 };
 
-let asideMenu = {
+/* let asideMenu = {
   'Холодильное оборудование' : ['Лари морозильные', 'Витрины кондитерские', 'Витрины низкотемпературные' ],
   'Оборудование для пекарни' : ['Оборудование для резки', 'Оборудование раскатки теста', 'Оборудование для расстойки'],
   'Торговое оборудование' : ['Кондитерские стеллажи', 'Торговые стеллажи', 'Другие стеллажи' ]
-};
+}; */
 
 
  //ВСЕ ВЫПАДАШКИ
@@ -144,15 +197,46 @@ let asideMenu = {
  //ВСЕ item В ВЫПАДАШКЕ
  const allItemAside = document.querySelectorAll('.nav-item__item');
 
+//СОЗДАЁМ БОКОВОЕ МЕНЮ
+/* const asideDiv = document.querySelector('.aside');
+asideDiv.innerHTML = '';
+
+
+
+for (let key in asideMenu) {
+
+  
+  asideDiv.innerHTML = `
+  
+  <li class="nav-item">
+  <div class="nav-item__header category-brands">${asideMenu[key]}</div>
+  <ul class="nav-item__list">
+      <li class="nav-item__item">
+          <a href="#" class="nav-item__link">${asideMenu[key][1]}</a>
+      </li>
+      <li class="nav-item__item">
+          <a href="#" class="nav-item__link">${asideMenu[key][1]}</a>
+      </li>
+      <li class="nav-item__item">
+          <a href="#" class="nav-item__link">${asideMenu[key][2]}</a>
+      </li>
+    </ul>
+  </li>
+  
+  `
+}; */
 
 
 
 
 
 
+const product = document.querySelector('.product');
 
-
-
+// СКРЫВАЕМ CATALOG НА МЕНЬШЕ ЧЕМ 420PX
+if (window.matchMedia("(max-width: 470px)").matches) {
+  product.classList.add('hidden');
+}
 
 
 
@@ -225,6 +309,13 @@ navHeader.forEach((item => {
         });
       }));
 
+      breadcrumpsList.insertAdjacentHTML("beforeend",
+
+        `<li class="breadcrumps__item">
+          <span class="breadcrumps__link" href="catalog.html">Холодильное оборудование</span>
+      </li>
+
+    `);
 
       for (let key in holod) {
 
@@ -251,7 +342,7 @@ navHeader.forEach((item => {
       breadcrumpsList.insertAdjacentHTML("beforeend",
 
         `<li class="breadcrumps__item">
-          <a class="breadcrumps__link" href="catalog.html">Оборудование для пекарни</a>
+          <span class="breadcrumps__link" href="catalog.html">Оборудование для пекарни</span>
       </li>
 
     `);
@@ -277,6 +368,15 @@ navHeader.forEach((item => {
       itemCards.innerHTML = "";
       list.classList.add('active');
 
+        //СОЗДАНИЕ ПОСЛЕДНЕГО ЭЛЕМЕНТА В ХЛЕБНЫХ КРОШКАХ
+      breadcrumpsList.insertAdjacentHTML("beforeend",
+
+        `<li class="breadcrumps__item">
+          <span class="breadcrumps__link" href="catalog.html">Торговое оборудование</span>
+      </li>
+
+    `);
+
       for (let key in torg) {
 
         itemCards.innerHTML += `
@@ -295,11 +395,13 @@ navHeader.forEach((item => {
       }
     }
 
-
+    const aside = document.querySelector('.aside');
+    aside.classList.add('hidden');
+    product.classList.remove('hidden');
+    
   });
 
 }));
-
 
 
 
