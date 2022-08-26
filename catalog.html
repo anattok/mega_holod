@@ -14,8 +14,11 @@
         <div class="header__inner shadow">
             <div class="container">
                 <div class="header__menu">
-                    <a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
+                    <a href="index.html" class="menu__logo"><img class="header__logo" src="images/logo.png" alt=""></a>
                     <nav class="menu">
+                        <button class="menu__btn">
+                            <img src="images/icons/burger-menu.svg" alt="">
+                        </button>
                         <ul class="menu__list">
                             <li class="menu__item">
                                 <a href="about.html" class="menu__link">О компании</a>
@@ -53,26 +56,12 @@
             <div class="container">
                 <h3 class="catalog__title title">Каталог продукции</h3>
                 <div class="catalog__columns">
-                    <div class="aside">
-                        <div class="nav-item">
-                            <div class="nav-item__header">Бренды</div>
+                    <ul class="aside">
+                        <li class="nav-item">
+                            <div class="nav-item__header category-fridge">Холодильное оборудование</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Бренд 1</a>
-                                </li>
-                                <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Бренд 2</a>
-                                </li>
-                                <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Бренд 3</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header ">Холодильное оборудование</div>
-                            <ul class="nav-item__list">
-                                <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Ларь морозильные</a>
+                                    <a href="#" class="nav-item__link">Лари морозильные</a>
                                 </li>
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Витрины кондитерские</a>
@@ -81,37 +70,37 @@
                                     <a href="#" class="nav-item__link">Витрины низкотемпературные</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Оборудование для пекарни</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-bakery">Оборудование для пекарни</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Оборудование для пекарни 1</a>
+                                    <a href="#" class="nav-item__link">Оборудование для резки</a>
                                 </li>
                                 <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Оборудование для пекарни 2</a>
+                                    <a href="#" class="nav-item__link">Оборудование раскатки теста</a>
                                 </li>
                                 <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Оборудование для пекарни 3</a>
+                                    <a href="#" class="nav-item__link">Оборудование для расстойки</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Торговое оборудование</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-trade">Торговое оборудование</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Торговое оборудование 1</a>
+                                    <a href="#" class="nav-item__link">Кондитерские стеллажи</a>
                                 </li>
                                 <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Торговое оборудование 2</a>
+                                    <a href="#" class="nav-item__link">Торговые стеллажи</a>
                                 </li>
                                 <li class="nav-item__item">
-                                    <a href="#" class="nav-item__link">Торговое оборудование 3</a>
+                                    <a href="#" class="nav-item__link">Другие стеллажи</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Переработка мяса</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-meat">Переработка мяса</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Переработка мяса 1</a>
@@ -123,9 +112,9 @@
                                     <a href="#" class="nav-item__link">Переработка мяса 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Переработка овощей</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-meat">Переработка овощей</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Переработка овощей 1</a>
@@ -137,9 +126,9 @@
                                     <a href="#" class="nav-item__link">Переработка овощей 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Оборудование для фаст-фуда</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-fastfood">Оборудование для фаст-фуда</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Оборудование для фаст-фуда 1</a>
@@ -151,9 +140,9 @@
                                     <a href="#" class="nav-item__link">Оборудование для фаст-фуда 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Оборудование для бара</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-bar">Оборудование для бара</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Оборудование для бара 1</a>
@@ -165,9 +154,9 @@
                                     <a href="#" class="nav-item__link">Оборудование для бара 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Линии раздачи питания</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-food">Линии раздачи питания</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Линии раздачи питания 1</a>
@@ -179,9 +168,9 @@
                                     <a href="#" class="nav-item__link">Линии раздачи питания 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Оборудование для пиццерии</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-pizza" >Оборудование для пиццерии</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Оборудование для пиццерии 1</a>
@@ -193,9 +182,9 @@
                                     <a href="#" class="nav-item__link">Оборудование для пиццерии 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Доп. оборудование</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-extra">Доп. оборудование</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Доп. оборудование 1</a>
@@ -207,9 +196,9 @@
                                     <a href="#" class="nav-item__link">Доп. оборудование 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Посуда и кухонный инвентарь</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-dishes">Посуда и кухонный инвентарь</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Посуда и кухонный инвентарь 1</a>
@@ -221,9 +210,9 @@
                                     <a href="#" class="nav-item__link">Посуда и кухонный инвентарь 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Оборудование для столовой</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-canteen">Оборудование для столовой</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Оборудование для столовой 1</a>
@@ -235,9 +224,9 @@
                                     <a href="#" class="nav-item__link">Оборудование для столовой 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Готовые решения</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-done">Готовые решения</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Готовые решения 1</a>
@@ -249,9 +238,9 @@
                                     <a href="#" class="nav-item__link">Готовые решения 3</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="nav-item">
-                            <div class="nav-item__header">Запчасти</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item__header category-parts">Запчасти</div>
                             <ul class="nav-item__list">
                                 <li class="nav-item__item">
                                     <a href="#" class="nav-item__link">Запчасти 1</a>
@@ -263,8 +252,8 @@
                                     <a href="#" class="nav-item__link">Запчасти 3</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     <div class="product">
                         <ul class="product__cards">
                             <li class="product__card">
@@ -376,7 +365,7 @@
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__menu">
-                    <a href="#" class="logo"><img src="images/footer-logo.png" alt=""></a>
+                    <a href="#" class="footer-menu__logo"><img src="images/footer-logo.png" alt=""></a>
                     <nav class="footer-menu">
                         <ul class="footer-menu__list">
                             <li class="footer-menu__item">
